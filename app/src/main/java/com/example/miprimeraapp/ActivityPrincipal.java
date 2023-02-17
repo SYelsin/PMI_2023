@@ -11,6 +11,7 @@ public class ActivityPrincipal extends AppCompatActivity {
 
     Button btningresar;
     Button btnlista;
+    Button btncombo;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class ActivityPrincipal extends AppCompatActivity {
 
         btningresar = (Button) findViewById(R.id.btningresar);
         btnlista = (Button) findViewById(R.id.btnlista);
+        btncombo = (Button) findViewById(R.id.btncombo);
         btningresar.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
@@ -26,6 +28,11 @@ public class ActivityPrincipal extends AppCompatActivity {
 
         btnlista.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),ActivityListView.class);
+            startActivity(intent);
+        });
+
+        btncombo.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),activity_combo.class);
             startActivity(intent);
         });
 
